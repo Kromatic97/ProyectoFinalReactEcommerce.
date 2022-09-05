@@ -1,5 +1,49 @@
 .active-link{
-  font-size: 30px;
-  color: white;
-  background-color: red;
+  font-size: 20px;
+  color: #FF4949;
+  text-decoration: none;
+ 
+  
+}
+
+.header{
+
+  display: flex;
+  border: solid;
+  text-decoration: none;
+}
+
+.header__logo{
+  width: 600px;
+  padding-left:25px;
+  margin-right: 100px;
+  display: flex;
+  align-items: center;
+  color: #FF4949;
+  text-decoration: none;
+}
+
+
+.header__list{
+ width: 565px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 50px;
+ 
+}
+
+.header__link{
+  text-decoration: none;
+}
+.header__item{
+  text-align: center;
+  text-decoration: none;
+  
+}
+
+li{
+  list-style: none;
+
 }
