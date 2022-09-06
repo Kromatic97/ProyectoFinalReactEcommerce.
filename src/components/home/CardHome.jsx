@@ -17,12 +17,12 @@ const CardHome = ({product}) => {
 
         <div className='card-home__body'>
             <h3 className='card-home__name'>{product.title}</h3>
-        <section className='card-home__price'>
-            <h4 className='card-home__label'>Price</h4>
-            <span className='card-home__price-value'>{product.price}</span>
-        </section>
+            <section className='card-home__price'>
+                <h4 className='card-home__label'>Price</h4>
+                <span className='card-home__price-value'>{product.price}</span>
+            </section>
 
-        <button className='card-home__btn'><i className="fa-solid fa-cart-shopping"></i></button>
+            <button className='card-home__btn'><i className="fa-solid fa-cart-shopping"></i></button>
         </div>
 
 
