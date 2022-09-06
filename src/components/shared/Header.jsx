@@ -19,18 +19,18 @@ const Header = () => {
 
                 <li className="header__item">
                   <NavLink className={({isActive}) => isActive ? 'active-link': ''} to="/login">
-                  <h2><i class="fa-regular fa-user"></i></h2>
+                  <h2><i className="fa-regular fa-user"></i></h2>
                   </NavLink>
                 </li>
                 
                 <li className="header__item">
                   <NavLink className={({isActive}) => isActive ? 'active-link': ''}to="/purchases">
-                    <h2><i class="fa-solid fa-basket-shopping"></i></h2>
+                    <h2><i className="fa-solid fa-basket-shopping"></i></h2>
                   </NavLink>
                 </li>
 
                 <li className="header__item">
-                  <h2 className="header__link"><i class="fa-solid fa-cart-shopping"></i></h2>
+                  <h2 className="header__link"><i className="fa-solid fa-cart-shopping"></i></h2>
                 </li>
 
         </ul>
