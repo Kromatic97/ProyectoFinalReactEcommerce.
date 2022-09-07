@@ -1,5 +1,7 @@
+import axios from 'axios'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import getConfig from '../../utils/getConfig'
 
 //para navegar por cada uno de los productos
 const CardHome = ({product}) => {
@@ -7,6 +9,20 @@ const CardHome = ({product}) => {
     //funcion para pasar en el Onclick de cada card del producto parar al article//
     const handleClick = () => {
         navigate(`/product/${product.id}`)
+    }
+
+    //se agrega el producto al carrito//
+    const handleAddCart = e =>{
+        e.stopPropagation()
+        const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/cart'
+        const obj = {
+            id: product.id,
+            quantity:1
+        }
+
+        axios.post(URL, obj, getConfig())
+        .then(res => console.log(res.data))
+        .catch(err => console.log(err))
     }
 
   return (
@@ -22,7 +38,7 @@ const CardHome = ({product}) => {
                 <span className='card-home__price-value'>{product.price}</span>
             </section>
 
-            <button className='card-home__btn'><i className="fa-solid fa-cart-shopping"></i></button>
+            <button onClick={handleAddCart} className='card-home__btn'><i className="fa-solid fa-cart-shopping"></i></button>
         </div>
 
 

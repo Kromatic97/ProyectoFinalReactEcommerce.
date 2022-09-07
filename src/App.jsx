@@ -9,6 +9,7 @@ import Purchases from './components/routes/Purchases'
 import Header from './components/shared/Header'
 import axios from 'axios'
 import Cart from './components/shared/Cart'
+import ProtectedRoutes from './components/routes/ProtectedRoutes'
 
 
 
@@ -31,6 +32,8 @@ function App() {
   //   .catch(err => console.log(err))
  
   // }, [])
+
+
   
 
   return (
@@ -39,9 +42,13 @@ function App() {
           <Routes> 
             <Route path='/' element={<Home />}/>
             <Route path='/login' element={<Login />}/>
-            <Route path='/purchases' element={<Purchases />}/>
             <Route path='/product/:id' element={<ProductDetail />}/> 
-            <Route path='/cart' element={<Cart />}/>
+
+            <Route element={<ProtectedRoutes />}>
+                <Route path='/purchases' element={<Purchases />}/>
+                <Route path='/cart' element={<Cart />}/>
+            </Route>
+
           </Routes>
     </div>
   
