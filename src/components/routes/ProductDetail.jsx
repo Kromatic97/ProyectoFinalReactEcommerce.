@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ProductoDescription from '../productDetail/ProductoDescription'
 
+
 const ProductDetail = () => {
 
   const [productInfo, setProductInfo] = useState()
@@ -24,6 +25,7 @@ const ProductDetail = () => {
       <ProductoDescription 
       productInfo = {productInfo}
       />
+      
     </div>
   )
 }

@@ -30,7 +30,9 @@ const Header = () => {
                 </li>
 
                 <li className="header__item">
-                  <h2 className="header__link"><i className="fa-solid fa-cart-shopping"></i></h2>
+                <NavLink className={({isActive}) => isActive ? 'active-link': ''}to="/cart">
+                    <h2><i className="fa-solid fa-cart-plus"></i></h2>
+                </NavLink>
                 </li>
 
         </ul>

@@ -68,6 +68,59 @@ img{
     width:100%;
 }
 
+/*Product Details*/
+.product-info__name{
+    color: #f85555;
+}
+
+.product-info__gral{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+padding: 10px;
+margin: 10px;
+width: 600px;
+
+border-radius: 15px;
+background-color: white;
+border:solid 1px;
+border-color: #f85555;
+}
+
+.product-info__price{
+   
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.product-info__quantity{
+    
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.product-info__btn{
+    background-color: #f85555;
+    border: none;
+    width: 50px;
+    height: 25px;
+    color: #ccc7cc;
+    
+    border-color: aliceblue;
+    border: solid 1px;
+    cursor: pointer;
+}
 
 .card-home{
     max-width: 300px;

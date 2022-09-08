@@ -1,4 +1,8 @@
+import axios from 'axios'
 import React, { useState } from 'react'
+import getConfig from '../../utils/getConfig'
+
+
 
 const ProductoDescription = ({ productInfo }) => {
 
@@ -17,10 +21,21 @@ const handleMinus = () => {
     }
 }
 
+const handleAddCart = () =>{
+     const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/cart'
 
+     const obj = {
+        id:productInfo.id,
+        quantity:counter
+     }
+    axios.post(URL, obj, getConfig())
+    .then(res => console.log(res.data))
+    .catch(err => console.log(err))
+
+}
 
   return (
-    <section>
+    <section className='product-info__gral'>
             <h2 className='product-info__name'>{productInfo?.title}</h2>
             <p className='product-info__description'>{productInfo?.description}</p>
             <div className='product-info__body'>
@@ -32,12 +47,13 @@ const handleMinus = () => {
                 <article className='product-info__quantity'>
                     <h3 className='product-info__quantity-label'>Quantity</h3>
                     <div className='product-info__quantity-value'>
-                        <button onClick={handleMinus}>-</button>
-                        <button>{counter}</button>
-                        <button onClick={handlePlus}>+</button>
+                        <button className= 'product-info__btn minus' onClick={handleMinus}>-</button>
+                        <button className= 'product-info__btn counter'>{counter}</button>
+                        <button className= 'product-info__btn plus' onClick={handlePlus}>+</button>
                     </div>
 
                 </article>
+                <button onClick={handleAddCart}>Add to Card</button>
 
             </div>
     </section>
