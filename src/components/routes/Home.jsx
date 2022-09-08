@@ -6,11 +6,7 @@ import CardHome from '../home/CardHome'
 
 const Home = () => {
 
-const dispatch = useDispatch()
 
-useEffect(() => {
-dispatch(getAllProducts())
-}, [])
 
 const products = useSelector(state => state.products)
 

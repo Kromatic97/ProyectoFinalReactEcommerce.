@@ -10,6 +10,8 @@ import Header from './components/shared/Header'
 import axios from 'axios'
 import Cart from './components/shared/Cart'
 import ProtectedRoutes from './components/routes/ProtectedRoutes'
+import { useDispatch } from 'react-redux'
+import { getAllProducts } from './store/slices/products.slice'
 
 
 
@@ -33,7 +35,11 @@ function App() {
  
   // }, [])
 
+  const dispatch = useDispatch()
 
+  useEffect(() => {
+  dispatch(getAllProducts())
+  }, [])
   
 
   return (
