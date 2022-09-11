@@ -28,7 +28,6 @@ function App() {
   //         phone: '9998766333',
   //         role: 'admin'
   //     }
-
   //   axios.post(URL, obj)
   //   .then(res => console.log(res.data))
   //   .catch(err => console.log(err))
@@ -54,8 +53,7 @@ function App() {
                 <Route path='/purchases' element={<Purchases />}/>
                 <Route path='/cart' element={<Cart />}/>
             </Route>
-
-          </Routes>
+         </Routes>
     </div>
   
   )

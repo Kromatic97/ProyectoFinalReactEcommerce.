@@ -9,7 +9,7 @@ const ProductoDescription = ({ productInfo }) => {
 const [counter, setCounter] = useState(1)
 
 const handlePlus = () => {
-    if(counter + 1 <= productInfo.stock)
+    if(counter + 1 <= productInfo)
     setCounter(counter + 1 )
 }
     

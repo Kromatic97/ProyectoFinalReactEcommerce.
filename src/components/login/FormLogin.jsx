@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { NavLink } from "react-router-dom";
 
 const FormLogin = () => {
 
@@ -36,7 +37,9 @@ const FormLogin = () => {
             <input {...register('password')}className='login__input' type="password" id="password"/>
         </div>
 
+    <NavLink to="/">
         <button className='login__btn'>Login</button>
+    </NavLink>
 
     </form>
   )

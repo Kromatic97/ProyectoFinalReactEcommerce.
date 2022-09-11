@@ -358,3 +358,67 @@ color: grey;
     background-color: dimgray;
     color:white;
 }
+
+.container-similar-products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+/*card-purchase*/
+.purchase{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    
+}
+
+.card-purchase-total{
+    width: 400px;
+    
+    margin: 0.5em;
+    
+}
+
+.card-purchase{
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: wap;
+    gap: 1em;
+    border: solid 1px #f85555;
+    border-radius: 5px;
+    padding: 1em;
+    
+}
+
+.card-purchase__body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card-purchase__item{
+    width: 350px;
+    height: auto;
+    border: solid 1px;
+    border-color: #f85555;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-self: flex-end;
+    padding: 1em;
+    margin-bottom: 1em;
+   text-align: center;
+    
+    
+}

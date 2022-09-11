@@ -18,25 +18,25 @@ const Purchases = () => {
   console.log(purchases);
 
   return (
-    <div className='purchase'>
-      <h2 className=''>Purchases</h2>
+    <div>
+      <h2>Purchase</h2>
+    <article className='purchase'>
       
-      <div>
-
-
-      </div>
-      {
+     {
         purchases?.map(purchase => (
           <PurchasesCard 
           key={purchase.id}
           purchase={purchase}
           />
+          
         ))
-
-
       }
+      
+    </article>
 
-      </div>
+    </div>
+      
+      
   )
 }
 
